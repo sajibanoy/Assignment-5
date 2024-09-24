@@ -27,6 +27,8 @@
             }
         }
     </script>
+
+    <!-- Custom Font Style -->
     <style>
         .font-lexend {
             font-family: "Lexend", sans-serif;
@@ -35,12 +37,12 @@
 </head>
 
 <body>
-    <header class="bg-[#f9f7f3] pt-5 pb-10">
+    <header class="bg-[#f9f7f3] pt-5 pb-10 sticky top-0 z-50">
         <!-- Navbar Starts Here -->
         <div class="navbar lg:w-2/3 mx-auto">
             <div class="navbar-start">
                 <div>
-                    <button class="btn bg-primary text-xl font-semibold">Blog</button>
+                    <a href="blog.html" class="btn bg-primary text-xl font-semibold">Blog</a>
                 </div>
             </div>
             <div class="navbar-center space-x-3">
@@ -149,7 +151,7 @@
                 <h2 class="text-3xl font-bold mb-4">Congrats!</h2>
                 <img src="./assets/coin.png" alt="Coin Icon" class="mx-auto w-12 mb-4">
                 <p class="text-lg">You have donated for humankind successfully</p>
-                <button id="closeModal" class="mt-6 px-6 py-2 bg-gray-200 rounded-lg text-black">Close
+                <button id="btn-close" class="mt-6 px-6 py-2 bg-gray-200 rounded-lg text-black">Close
                     Confirmation</button>
             </div>
         </div>
