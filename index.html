@@ -26,24 +26,41 @@
 <body class="font-lexend">
     <header class="bg-[#f9f7f3] pt-5 pb-10 sticky top-0 z-50">
         <!-- Navbar Starts Here -->
-        <div class="navbar lg:w-2/3 mx-auto">
+        <div class="navbar lg:w-2/3 mx-auto px-4">
             <div class="navbar-start">
-                <div>
-                    <a href="blog.html"
-                        class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 text-xl  rounded-lg font-semibold hover:underline">Blog</a>
+                <!-- Hamburger icon for smaller screens -->
+                <div class="dropdown lg:hidden">
+                    <label tabindex="0" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </label>
+                    <ul tabindex="0" class="menu dropdown-content mt-2 p-2 rounded-box ">
+                        <li class="bg-gradient-to-r from-blue-500 to-purple-600 text-white"><a href="blog.html">Blog</a>
+                        </li>
+                    </ul>
                 </div>
+                <a href="blog.html"
+                    class="hidden lg:block bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 text-xl rounded-lg font-semibold hover:underline">Blog</a>
             </div>
-            <div class="navbar-center space-x-3">
-                <img src="./assets/logo.png" alt="logo">
+
+            <!-- Center logo and title -->
+            <div class="navbar-center space-x-3 mr-4">
+                <img src="./assets/logo.png" alt="logo" class="w-8 h-8">
                 <h2 class="text-xl font-semibold">Donate Bangladesh</h2>
             </div>
-            <div class="navbar-end space-x-2">
-                <img src="./assets/coin.png" alt="logo">
-                <h4 id="main-balance" class="text-xl font-medium">5000 BDT</h4>
+
+            <!-- Navbar end with balance information -->
+            <div class="navbar-end lg:space-x-2">
+                <img src="./assets/coin.png" alt="logo" class="w-8 h-8">
+                <h4 id="main-balance" class="text-lg lg:text-xl lg:font-medium">5000 BDT</h4>
             </div>
         </div>
         <!-- Navbar ends Here -->
     </header>
+
     <main>
         <!--Donation and History Buttons-->
         <div class="w-2/3 mt-20 flex justify-center space-x-4 mx-auto">
@@ -147,6 +164,11 @@
                 <button id="closeModal" class="mt-6 px-6 py-2 bg-gray-200 rounded-lg text-black">Close
                     Confirmation</button>
             </div>
+        </div>
+        <!-- History Section -->
+        <div id="history-section" class="hidden lg:w-2/3 mx-auto mt-8 pb-10">
+            <h3 class="text-lg font-semibold text-center">Expense History</h3>
+            <div id="history-list" class="bg-gray-100 p-4 rounded-lg"></div>
         </div>
     </main>
 
